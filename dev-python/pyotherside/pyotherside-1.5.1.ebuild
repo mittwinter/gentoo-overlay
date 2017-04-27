@@ -14,7 +14,9 @@ SLOT="0"
 LICENSE=""
 USE=""
 
-RDEPEND=">=virtual/qt-5
+RDEPEND="dev-qt/qtcore:5
+dev-qt/qtdeclarative:5
+dev-qt/qtsvg:5
 >=dev-lang/python-3.3.0"
 DEPEND="${RDEPEND}"
 
