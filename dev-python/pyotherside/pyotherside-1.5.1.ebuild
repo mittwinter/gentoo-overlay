@@ -10,6 +10,7 @@ SRC_URI="https://github.com/thp/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE=""
 
 KEYWORDS="~amd64"
+SLOT="0"
 LICENSE=""
 USE=""
 
