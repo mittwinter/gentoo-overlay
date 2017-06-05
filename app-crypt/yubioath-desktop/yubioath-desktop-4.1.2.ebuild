@@ -20,7 +20,7 @@ dev-qt/qtquickcontrols
 app-crypt/yubikey-manager"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN}-${PN}-${PV}"
+S="${WORKDIR}/"
 
 src_prepare() {
 	epatch ${FILESDIR}/qtsingleapp.patch
