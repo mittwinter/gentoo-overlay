@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit qmake-utils
+inherit eutils qmake-utils
 
 DESCRIPTION="Library and tool for personalization of Yubico's YubiKey NEO"
 SRC_URI="http://opensource.yubico.com/yubioath-desktop/releases/${P}.tar.gz"
