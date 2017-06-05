@@ -15,6 +15,7 @@ LICENSE="BSD-2"
 USE="broken"
 
 RDEPEND="dev-qt/qtsingleapplication
+dev-qt/qtquickcontrols
 >=dev-python/pyotherside-1.5.1
 app-crypt/yubikey-manager"
 DEPEND="${RDEPEND}"
