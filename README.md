@@ -13,7 +13,7 @@ Via [layman](https://wiki.gentoo.org/wiki/Layman):
    ```
    overlays:
      # ...
-     https://dev.mroot.net/gentoo/repositories.xml
+     https://dev.wgnr.io/gentoo/repositories.xml
    ```
 3. Fetch the list of all repositories:
 
