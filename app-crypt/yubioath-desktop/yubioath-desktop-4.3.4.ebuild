@@ -1,29 +1,26 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-
-inherit eutils qmake-utils
+inherit qmake-utils eutils
 
 DESCRIPTION="Library and tool for personalization of Yubico's YubiKey NEO"
-SRC_URI="http://opensource.yubico.com/yubioath-desktop/releases/${P}.tar.gz"
 HOMEPAGE="http://opensource.yubico.com/yubioath-desktop"
+#https://github.com/Yubico/yubioath-desktop/issues/254
+SRC_URI="https://github.com/Yubico/yubioath-desktop/releases/download/${P}/${P}.tar.gz -> ${P}.tar"
 
 KEYWORDS="~amd64"
 SLOT="4"
 LICENSE="BSD-2"
-USE="broken"
 
 RDEPEND="dev-qt/qtsingleapplication
-dev-qt/qtquickcontrols
->=dev-python/pyotherside-1.5.1
-app-crypt/yubikey-manager"
-DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/"
+	dev-python/pyotherside"
+DEPEND="${RDEPEND}
+	>=app-crypt/yubikey-manager-0.5"
 
 src_prepare() {
-	epatch ${FILESDIR}/qtsingleapp.patch
+	#https://github.com/Yubico/yubioath-desktop/pull/207
+	epatch "${FILESDIR}/4.3-qtsingleapp.patch"
 	eapply_user
 }
 
